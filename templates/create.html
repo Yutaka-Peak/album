@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form actoin="" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="作成">
+</form>
+<a href="{% url 'list' %}">リストに戻る</a>
+{% endblock content %}

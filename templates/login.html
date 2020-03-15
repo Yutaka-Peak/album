@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body class="text-center">
+    <form class="form-signin" method="POST" action="">
+        {% csrf_token %}
+  <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+  {% if error %}
+  {{ error }}
+  {% endif %}
+  <label for="inputEmail" class="sr-only">ユーザー名</label>
+  <input type="username" id="inputusername" class="form-control" name="username" placeholder="username" required autofocus>
+  <label for="inputPassword" class="sr-only">パスワード</label>
+  <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+</form>
+</body>
+{% endblock content %}

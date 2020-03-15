@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Album Maker</h3>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <p class="lead"><hr></p>
+    <p class="lead">
+      <a href="{% url 'login' %}" class="btn btn-lg btn-secondary">ログインページ</a>
+      <a href="{% url 'signup' %}" class="btn btn-lg btn-secondary">アカウント作成</a>
+    </p>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    </div>
+  </footer>
+</div>
+</body>
+{% endblock content %}

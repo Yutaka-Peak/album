@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>アルバム一覧</h1>
+<hr>
+{% for item in object_list %}
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <img src="{{ item.image_01.url }}" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <a href="{% url 'detail' item.pk %}" class="btn btn-primary">アルバムを開く</a>
+      <p class="card-text">create by {{ item.author }}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
